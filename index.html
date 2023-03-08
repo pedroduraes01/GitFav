@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitFav</title>
+
+    <link rel="stylesheet" href="./app/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="./app/js/main.js" type="module" defer></script>
+</head>
+
+<body>
+
+    <div class="page">
+
+        <header>
+
+            <img src="./app/assets/gitFav.svg" alt="Uma estrela entre colchetes e a frente uma escrita chamada GitFav.">
+
+            <div class="find">
+                <label class="sr-only" for="user-name">Digite o Github username que quer favoritar</label>
+                <input id="user-name" type="text" placeholder="Digite o Github username que quer favoritar">
+
+                <button class="search">
+                    <img src="./app/assets/star.svg" alt="uma estrela.">
+                    Favoritos
+                </button>
+
+            </div>
+        </header>
+
+        <main>
+
+            <div class="container">
+                <table>
+
+                    <caption class="test hide">
+                        <div class="not-favorites">
+
+                            <img src="./app/assets/bigStar.svg" alt="estrela grande">
+
+                            <p>Nenhum favorito ainda</p>
+
+                        </div>
+                    </caption>
+
+                    <thead>
+
+                        <tr>
+                            <th>Usuário</th>
+                            <th>Repositories</th>
+                            <th>Fallowers</th>
+                            <th>Ação</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+                    </tbody>
+
+                </table>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>

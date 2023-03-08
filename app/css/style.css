@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --ff-body: 'Roboto';
+
+    --bg-body: hsla(0, 0%, 0%, 1);
+    --bg-button: hsla(195, 91%, 25%, 1);
+    --bg-input: hsla(191, 65%, 7%, 1);
+    --bg-table: hsla(194, 72%, 13%, 1);
+    --bg-lineAndBorder: hsla(191, 31%, 42%, 1);
+    --bg-buttonHover: hsla(0, 0%, 100%, 1);
+
+    --fc-primary: hsla(240, 9%, 89%, 1);
+    --fc-second: hsla(240, 6%, 51%, 1);
+    --fc-threed: hsla(355, 91%, 66%, 1);
+    --fc-buttonHover: hsla(195, 91%, 25%, 1);
+}
+
+body {
+    background: var(--bg-body);
+    font-size: 1.6rem;
+
+    height: 100vh;
+}
+
+.page {
+    display: grid;
+    place-items: center;
+}
+
+body,
+button,
+input {
+    font-family: var(--ff-body);
+    color: var(--fc-primary);
+}
+
+header {
+    padding-top: 11.5rem;
+    margin-bottom: 8.7rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 29.3rem;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.find {
+    display: flex;
+    gap: .8rem;
+}
+
+input {
+    width: 46.2rem;
+    height: 4.8rem;
+
+    background: var(--bg-input);
+
+    border: none;
+    border-radius: .5rem;
+
+    padding: 1.6rem;
+
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 100%;
+
+    color: #7C7C8A;
+}
+
+input:focus {
+    outline: 1px solid var(--bg-lineAndBorder);
+}
+
+.search {
+    width: 17.0rem;
+    height: 4.8rem;
+
+    background: var(--bg-button);
+
+    border-radius: .5rem;
+
+    padding: 1.2rem 3.2rem;
+
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+
+    cursor: pointer;
+
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+
+    color: hsla(0, 0%, 100%, 1);
+}
+
+/* .search:hover {
+    background: var(--bg-buttonHover);
+
+    color: var(--fc-buttonHover);
+} */
+
+main {
+    border: 1px solid hsla(191, 31%, 42%, 1);
+
+    border-radius: 1.2rem;
+}
+
+.container {
+    overflow: auto;
+
+    max-height: 68.8rem;
+
+}
+
+.container::-webkit-scrollbar {
+    width: 7px;
+    background: transparent;
+}
+
+/* 1 */
+.container::-webkit-scrollbar-button {
+    background: transparent;
+    height: 4.6rem;
+}
+
+/* 2 */
+.container::-webkit-scrollbar-track {
+    background: transparent;
+    height: 12.2rem;
+}
+
+/* 3 */
+.container::-webkit-scrollbar-track-piece {
+    background: transparent;
+    margin: 5px;
+}
+
+/* 4 */
+.container::-webkit-scrollbar-thumb {
+    background: hsla(191, 31%, 42%, 1);
+
+    border-radius: .6rem;
+}
+
+table {
+    border-collapse: collapse;
+
+    width: 112.0rem;
+    max-height: 66.8rem;
+}
+
+thead th {
+    padding: 1.6rem 4rem;
+
+    background: var(--bg-table);
+}
+
+table th:first-child {
+    border-top-left-radius: 1.2rem;
+
+    width: 50.4rem;
+}
+
+table th:last-child {
+    border-top-right-radius: 1.2rem;
+
+    width: 17.8rem;
+}
+
+thead tr {
+    text-align: left;
+}
+
+table th:nth-child(2) {
+    width: 21.8rem;
+}
+
+table tr:nth-child(odd) {
+    background: hsla(195, 61%, 6%, 0.5);
+}
+
+table tr:nth-child(even) {
+    background: hsla(192, 65%, 7%, 1);
+    border-top: 1px solid hsla(191, 31%, 42%, 1);
+    border-bottom: 1px solid hsla(191, 31%, 42%, 1);
+}
+
+table td:first-child {
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+
+    padding: 2.4rem 4rem;
+}
+
+table td:nth-child(2) {
+    padding: 2.4rem 4rem;
+}
+
+table td:nth-child(3) {
+    padding: 2.4rem 4rem;
+}
+
+.user img {
+    width: 5.6rem;
+    height: 5.6rem;
+
+    border-radius: 3rem;
+}
+
+.user a {
+    text-decoration: none;
+
+    color: var(--fc-primary);
+
+    display: grid;
+    gap: 0.8rem;
+
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 160%;
+}
+
+table td {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 160%;
+}
+
+.close {
+    border: none;
+    background: none;
+
+    padding: 2.4rem 4rem;
+
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 160%;
+
+    color: var(--fc-threed);
+
+    cursor: pointer;
+}
+
+table caption {
+    caption-side: bottom;
+
+    background: #030B0D;
+
+    border-radius: 0 0 1.2rem 1.2rem;
+}
+
+.not-favorites {
+    display: flex;
+    gap: 6rem;
+    align-items: center;
+    justify-content: center;
+
+    padding: 21rem 23.1rem 28.9rem 19.2rem;
+}
+
+.not-favorites p {
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 2.5rem;
+
+    color: #4E5455;
+}
+
+.hide {
+    display: none;
+}
